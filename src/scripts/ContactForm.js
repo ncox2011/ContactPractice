@@ -24,5 +24,5 @@ ContactList.ContactList.push(newContact)
     ContactList.addToContact()
 }
 
-// contactcollection.writeToLocalStorage(ContactList.addToContact)
+
 module.exports = ContactForm;
