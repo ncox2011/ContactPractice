@@ -14,18 +14,19 @@ const mainArticle = document.getElementById("article");
 const contactFragment = document.createDocumentFragment()
 
 let addToContact = () => {
-ContactList.forEach(item => {
-const newDiv = document.createElement("div");
-for (i in item) {
-    let para = document.createElement("p")
-    para.textContent = item[i]
-    contactFragment.appendChild(para)
+    // if (ContactList.getItem("localStorageKey") !== null) {
+    ContactList.forEach(item => {
+            const newDiv = document.createElement("div");
+            for (i in item) {
+                let para = document.createElement("p")
+                para.textContent = item[i]
+                contactFragment.appendChild(para)
+            }
+            mainArticle.appendChild(contactFragment)
+        })
+    // }
 }
-mainArticle.appendChild(contactFragment)
-})
-}
 
 
 
-
-module.exports = {ContactList, addToContact}
+module.exports = { ContactList, addToContact }
